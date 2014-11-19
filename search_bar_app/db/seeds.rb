@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
+quiz_images = QuizImage.create([ { name: "beat up chuck taylors" , filepath: "/app/assets/images/beat_up_chuck_taylor.jpg", category: "clothing", value: "1" }])
+
+binding.pry
+
+
+
