@@ -3,5 +3,7 @@ drink_finder
 
 WDI project 2
 
+Jamie Yerushalmi
 
-Jamie Y.
+Rebecca Ann Wong
+
