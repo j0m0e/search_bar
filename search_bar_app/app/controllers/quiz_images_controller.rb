@@ -5,16 +5,16 @@ class QuizImagesController < ApplicationController
 															(QuizImage.where( :category => "clothing", :value => 2 ).sample),
 															(QuizImage.where( :category => "clothing", :value => 3 ).sample),
 															(QuizImage.where( :category => "clothing", :value => 4 ).sample)]).shuffle
-		@quiz_image1 = category_1_image_array[0]
-		@quiz_image2 = category_1_image_array[1]
-		@quiz_image3 = category_1_image_array[2]
-		@quiz_image4 = category_1_image_array[3]
+		@category_1_quiz_image1 = category_1_image_array[0]
+		@category_1_quiz_image2 = category_1_image_array[1]
+		@category_1_quiz_image3 = category_1_image_array[2]
+		@category_1_quiz_image4 = category_1_image_array[3]
 		render :image_grid_one
 	end	
 
 	def form_1_submit
 		session[:value_array] = []
-		if session[:value_array].push(quiz_image_params[:value])
+		if session[:value_array].push(params[:value])
 			redirect_to quiz_images_2_path
 		else
 			redirect_to '/'	
