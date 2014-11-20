@@ -1,0 +1,13 @@
+<h3><%= session[:current_username] %></h3>
+  <%= link_to "Log Out", sessions_path, method: :delete %>
+
+<p>
+  <%= form_tag '/zipcode' do %>
+    <%= label_tag :zipcode %>
+    <%= text_field_tag :zipcode %>
+
+    <%= submit_tag 'Submit' %>
+  <% end %>
+</p>
+
+<!-- Check on how to store zipcode in session -->
