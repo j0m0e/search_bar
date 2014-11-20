@@ -1,1 +1,0 @@
-quizimages_controller.rb
