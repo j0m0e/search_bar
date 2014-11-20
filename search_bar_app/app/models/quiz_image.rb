@@ -3,4 +3,6 @@ class QuizImage < ActiveRecord::Base
   validates :value, presence: true
   validates :filepath, presence: true, uniqueness: true
   validates :category, presence: true
+
+
 end

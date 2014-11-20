@@ -1,0 +1,19 @@
+<div class="quiz_grid">
+
+<%= form_tag('/quiz_images/1') %>
+<%= hidden_field_tag @quiz_image1.value %>
+<%= image_submit_tag @quiz_image1.filepath %>
+
+<%= form_tag('/quiz_images/2') %>
+<%= hidden_field_tag @quiz_image2.value %>
+<%= image_submit_tag @quiz_image2.filepath %>
+
+<%= form_tag('/quiz_images/3') %>
+<%= hidden_field_tag @quiz_image3.value %>
+<%= image_submit_tag @quiz_image3.filepath %>
+
+<%= form_tag('/quiz_images/4') %>
+<%= hidden_field_tag @quiz_image4.value %>
+<%= image_submit_tag @quiz_image4.filepath %>
+
+</div>
