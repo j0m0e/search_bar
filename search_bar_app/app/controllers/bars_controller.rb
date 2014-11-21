@@ -1,1 +1,3 @@
-results_controller.rb
+class BarController < ApplicationController
+
+end
