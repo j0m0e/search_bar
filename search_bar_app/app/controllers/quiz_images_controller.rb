@@ -21,21 +21,18 @@ class QuizImagesController < ApplicationController
 	end	
 
 	def form_2
-		# - filler for testing
-		# category_1_image_array = ([(QuizImage.where( :category => "clothing", :value => 1 ).sample),
-		# 													(QuizImage.where( :category => "clothing", :value => 2 ).sample),
-		# 													(QuizImage.where( :category => "clothing", :value => 3 ).sample),
-		# 													(QuizImage.where( :category => "clothing", :value => 4 ).sample)]).shuffle
-		# @category_1_quiz_image1 = category_1_image_array[0]
-		# @category_1_quiz_image2 = category_1_image_array[1]
-		# @category_1_quiz_image3 = category_1_image_array[2]
-		# @category_1_quiz_image4 = category_1_image_array[3]
+		category_2_image_array = QuizImage.generate_category_2_image_array
+
+		@category_2_quiz_image1 = category_2_image_array[0]
+		@category_2_quiz_image2 = category_2_image_array[1]
+		@category_2_quiz_image3 = category_2_image_array[2]
+		@category_2_quiz_image4 = category_2_image_array[3]
+		
 		render :image_grid_two
 	end
 
 	def form_2_submit
 		if session[:value_array].push((params[:value]).to_i)
-			binding.pry
 			redirect_to quiz_images_3_path
 		else
 			redirect_to '/'	
