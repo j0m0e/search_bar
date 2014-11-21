@@ -1,4 +1,4 @@
-class BusinessAPI
+class BusinessAPI < ActiveRecord::Base
 
 
 	
