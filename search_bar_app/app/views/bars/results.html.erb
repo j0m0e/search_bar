@@ -1,16 +1,12 @@
-<<<<<<< HEAD
-||||||| merged common ancestors
+<% @search_results["businesses"].each do |bar| %>
 
-Testing
-=======
-<% @search_results[:business].each do |bar| %>
-Name: <%= bar[:name].capitalize %> 
+Name: <%= bar["name"].capitalize %> 
 
-Address: <% bar[:address].map do |address|%> 
-<%= address %></br>
+Address: <% bar["location"]["display_address"].each do |address|%> 
+				 <%= address %></br>
+				 <% end %>
+
+Rating: <img src= "<%=bar["rating_img_url_small"]%>">
+
+<img src= "<%=bar["image_url"]%>">
 <% end %>
-
-Rating: <img src="<%=bar[:rating_img_url_small]%>">
-
-<img src="<%=bar[:image_url]%>">
->>>>>>> 7834c9c986882633cdb23c12999a878dd879181e
