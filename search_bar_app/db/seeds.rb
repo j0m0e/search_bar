@@ -1,64 +1,125 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
 QuizImage.delete_all
 
 quiz_images = QuizImage.create([ 
-												{ name: "beat up chuck taylors" , 
-													filepath: "beat_up_chuck_taylor.jpg", 
+												{ filepath: "beat_up_chuck_taylor.jpg", 
 													category: "clothing", 
 													value: "1" },
 
-													{ name: "sperry topsiders" , 
-													filepath: "sperry_topsider.jpg", 
+													{ filepath: "sperry_topsider.jpg", 
 													category: "clothing", 
-													value: "3" },
+													value: "67" },
 
-													{ name: "birkin bag" , 
-													filepath: "birkin_bag.jpg", 
+													{ filepath: "birkin_bag.jpg", 
 													category: "clothing", 
-													value: "4" },
+													value: "100" },
 
-													{ name: "vans sneakers" , 
-													filepath: "vans_sneakers.jpg", 
+													{ filepath: "vans_sneakers.jpg", 
 													category: "clothing", 
-													value: "2" },
+													value: "34" },
 
-													{ name: "bow tie", 
-													filepath: "bow_tie.jpg", 
+													{ filepath: "bow_tie.jpg", 
 													category: "clothing", 
-													value: "4" },
+													value: "100" },
 
-													{ name: "flannel shirt" , 
-													filepath: "flannel_shirt.jpg", 
+													{ filepath: "flannel_shirt.jpg", 
 													category: "clothing", 
-													value: "2" },
+													value: "34" },
 
-													{ name: "flip flops" , 
-													filepath: "flip_flops.jpg", 
+													{ filepath: "flip_flops.jpg", 
 													category: "clothing", 
-													value: "2" },
+													value: "34" },
 
-													{ name: "jean jacket" , 
-													filepath: "jean_jacket.jpg", 
+													{ filepath: "jean_jacket.jpg", 
 													category: "clothing", 
-													value: "2" },
+													value: "34" },
 
-													{ name: "leather jacket" , 
-													filepath: "leather_jacket.jpg", 
+													{ filepath: "leather_jacket.jpg", 
 													category: "clothing", 
 													value: "1" },
 
-													{ name: "overalls" , 
-													filepath: "overalls.jpg", 
+													{ filepath: "overalls.jpg", 
 													category: "clothing", 
+													value: "1" },
+############################################################
+													{ filepath: "suits.jpg", 
+													category: "tv_show", 
+													value: "100" },
+
+													{ filepath: "downton_abbey.jpg", 
+													category: "tv_show", 
+													value: "100" },
+
+													{ filepath: "madmen.jpg", 
+													category: "tv_show", 
+													value: "100" },
+
+													{ filepath: "house_of_cards.jpg", 
+													category: "tv_show", 
+													value: "100" },
+############################################################
+													{ filepath: "sherlock.jpg", 
+													category: "tv_show", 
+													value: "67" },
+
+													{ filepath: "how_to_get_away_with_murder.jpg", 
+													category: "tv_show", 
+													value: "67" },
+
+													{ filepath: "scandal.png", 
+													category: "tv_show", 
+													value: "67" },
+
+													{ filepath: "greys_anatomy.jpg", 
+													category: "tv_show", 
+													value: "67" },
+
+													{ filepath: "dexter.jpg", 
+													category: "tv_show", 
+													value: "67" },
+
+													{ filepath: "game_of_thrones.jpg", 
+													category: "tv_show", 
+													value: "67" },
+############################################################
+													{ filepath: "friends.jpg", 
+													category: "tv_show", 
+													value: "34" },
+
+													{ filepath: "how_i_met-your_mother.jpg", 
+													category: "tv_show", 
+													value: "34" },
+
+													{ filepath: "seinfeld.jpg", 
+													category: "tv_show", 
+													value: "34" },
+
+													{ filepath: "arrested_development.jpg", 
+													category: "tv_show", 
+													value: "34" },
+
+													{ filepath: "true_detective.jpg", 
+													category: "tv_show", 
+													value: "34" },
+############################################################
+													{ filepath: "breaking_bad.jpg", 
+													category: "tv_show", 
+													value: "1" },
+
+													{ filepath: "walking_dead.jpg", 
+													category: "tv_show", 
+													value: "1" },
+
+													{ filepath: "duck_dynasty.jpg", 
+													category: "tv_show", 
+													value: "1" },
+
+													{ filepath: "deadliest_catch.jpg", 
+													category: "tv_show", 
+													value: "1" },
+
+													{ filepath: "always_sunny.jpg", 
+													category: "tv_show", 
 													value: "1" }
-
 													])
 
 
