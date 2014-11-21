@@ -7,8 +7,13 @@
 <% end %>
 
 
-<%= form_for @zip_code do |f| %>
+<%= form_for '/bars' do |f| %>
   <%= f.label :zip_code %><br>
   <%= f.text_field :zip_code %><br>
-  <br><%= f.submit %>
+  <% if session[:current_user_id] %>
+  <% User.find_by(session[:current_user_id].zip_codes.push[:zip_code])
+  <br><%= f.submit 'Submit'%>
   <% end %>
+  <% end %>
+
+

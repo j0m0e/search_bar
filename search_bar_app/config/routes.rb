@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :show]
 
-
   #HOME ROUTE
   root 'application#index'
 
@@ -23,5 +22,9 @@ Rails.application.routes.draw do
 
   #ZIP CODE ROUTE
   get '/zip_codes/search', to: 'zip_codes#search', as: 'search'
+
+  #BARS ROUTE
+  get '/bars'
+  # post route
 
 end

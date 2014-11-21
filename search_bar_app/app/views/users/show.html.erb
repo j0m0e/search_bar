@@ -1,7 +1,7 @@
 <!-- Return zipcodes -->
 
 if <% session[:current_user_id] %>
-<%= ZipCode.find(session[:current_zip_code]).username %>
+<%= ZipCode.find_by(session[:current_zip_code]) %>
 <% end %>
 
 <!-- History of results -->
