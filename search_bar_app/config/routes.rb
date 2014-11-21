@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   get "/quiz_images/4", to: "quiz_images#form_4"
   post "/quiz_images/4", to: "quiz_images#form_4_submit"
 
-	#SESSIONS ROUTES
   get 'sessions/new' => 'sessions#new', as: 'login'
   post 'sessions/new'=> 'sessions#create'
   delete 'sessions'  => 'sessions#destroy'
