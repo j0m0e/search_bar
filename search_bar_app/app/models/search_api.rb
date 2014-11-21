@@ -1,6 +1,6 @@
 class SearchAPI < ActiveRecord::Base
 
-# method that searches by: 
+# Method that searches by: 
 # Zipcode
 # Category_Filter: Formal to Casual
 # Open today
@@ -21,10 +21,9 @@ class SearchAPI < ActiveRecord::Base
 	def self.search_for_bar(search_term, zipcode) 
 	params = { term: search_term, limit: 3}
 	client = make_client
-	results = client.search("#{zipcode}", params).to_json
+	results = client.search("#{zip_code}", params).to_json
 	parsed_results = JSON.parse(results)
 	end
-
 
 
 end
