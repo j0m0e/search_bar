@@ -18,8 +18,12 @@ class SearchAPI < ActiveRecord::Base
 	end
 
 	
+
 	def self.search_for_bar(search_term, zipcode) 
-	params = { term: search_term, limit: 3}
+	params = { term: "bars", 
+		category_filter: search_term, 
+		location: zipcode, 
+		limit: 3}
 	client = make_client
 	results = client.search("#{zipcode}", params).to_json
 	parsed_results = JSON.parse(results)
