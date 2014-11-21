@@ -7,14 +7,15 @@
 <% end %>
 
 
-<%= form_for '/bars' do |f| %>
-  <%= f.label :zip_code %><br>
-  <%= f.text_field :zip_code %><br>
-  <% if session[:current_user_id] %>
-  <% User.find_by(session[:current_user_id].zip_codes.push[:zip_code])%>
-  <% end %>
-  <br><%= f.submit 'Submit'%>
+<%= form_tag ('/bars') do %>
+<%= label_tag :zip_code %><br>
+<%= text_field_tag :zip_code %><br>
+<%= submit_tag 'Submit'%>
+<% end %>  
  
-  <% end %>
 
 
+
+<%# if session[:current_user_id] %>
+  <%# User.find_by(session[:current_user_id].zip_codes.push[:zip_code])%><br/>
+<%# end %>

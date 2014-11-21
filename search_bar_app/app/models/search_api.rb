@@ -17,10 +17,10 @@ class SearchAPI
 	end
 
 	
-	def self.search_for_bar(search_term, zipcode) 
-	params = { term: search_term, limit: 3}
+	def self.search_for_bar(quiz_results, zip_code) 
+	parameters = { term: quiz_results, limit: 3}
 	client = make_client
-	results = client.search("#{zip_code}", params).to_json
+	results = client.search(zip_code, parameters).to_json
 	parsed_results = JSON.parse(results)
 	end
 

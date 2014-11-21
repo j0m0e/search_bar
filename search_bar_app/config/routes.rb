@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 
   #BARS ROUTE
   get "/bars/results", to: "bars#results"
-  post "/bars/results", to: "bars#results"
+  post "/bars", to: "bars#search", as: 'search_for_bar'
 
   
 end
