@@ -6,13 +6,16 @@
 	<%= link_to "Sign Up", new_user_path %>
 <% end %>
 
-<p>
-  <%= form_tag '/zipcode' do %>
-    <%= label_tag :zipcode %>
-    <%= text_field_tag :zipcode %>
 
-    <%= submit_tag 'Submit' %>
-  <% end %>
-</p>
+<%= form_tag ('/bars') do %>
+<%= label_tag :zip_code %><br>
+<%= text_field_tag :zip_code %><br>
+<%= submit_tag 'Submit'%>
+<% end %>  
+ 
 
-<!-- Check on how to store zipcode in session -->
+
+
+<%# if session[:current_user_id] %>
+  <%# User.find_by(session[:current_user_id].zip_codes.push[:zip_code])%><br/>
+<%# end %>

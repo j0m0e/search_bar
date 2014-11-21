@@ -15,8 +15,17 @@ Rails.application.routes.draw do
   get "/quiz_images/4", to: "quiz_images#form_4"
   post "/quiz_images/4", to: "quiz_images#form_4_submit"
 
+  #SESSIONS ROUTE
   get 'sessions/new' => 'sessions#new', as: 'login'
   post 'sessions/new'=> 'sessions#create'
   delete 'sessions'  => 'sessions#destroy'
 
+  #ZIP CODE ROUTE
+  get '/zip_codes/search', to: 'zip_codes#search', as: 'search'
+
+  #BARS ROUTE
+  get "/bars/results", to: "bars#results"
+  post "/bars", to: "bars#search", as: 'search_for_bar'
+
+  
 end
