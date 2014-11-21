@@ -1,4 +1,4 @@
-class ZipCodeController < ApplicationController
+class ZipCodesController < ApplicationController
   def show
   @zip_code = ZipCode.new
   end

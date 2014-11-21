@@ -1,5 +1,4 @@
-class SearchAPI < ActiveRecord::Base
-
+class SearchAPI 
 # Method that searches by: 
 # Zipcode
 # Category_Filter: Formal to Casual
@@ -25,6 +24,7 @@ class SearchAPI < ActiveRecord::Base
 	parsed_results = JSON.parse(results)
 	end
 
+# returns 3 results in an array of JSON objects
 
 end
 

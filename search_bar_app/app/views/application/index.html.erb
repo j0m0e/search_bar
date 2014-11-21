@@ -11,9 +11,10 @@
   <%= f.label :zip_code %><br>
   <%= f.text_field :zip_code %><br>
   <% if session[:current_user_id] %>
-  <% User.find_by(session[:current_user_id].zip_codes.push[:zip_code])
-  <br><%= f.submit 'Submit'%>
+  <% User.find_by(session[:current_user_id].zip_codes.push[:zip_code])%>
   <% end %>
+  <br><%= f.submit 'Submit'%>
+ 
   <% end %>
 
 

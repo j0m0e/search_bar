@@ -24,7 +24,8 @@ Rails.application.routes.draw do
   get '/zip_codes/search', to: 'zip_codes#search', as: 'search'
 
   #BARS ROUTE
-  get '/bars'
-  # post route
+  get "/bars/results", to: "bars#results"
+  post "/bars/results", to: "bars#results"
 
+  
 end
