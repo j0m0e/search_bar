@@ -1,25 +1,17 @@
-class ZipCodeController < ApplicationController
-
-  def index
-    @zipcodes = zipcode.all
-  end
-
+class ZipCodesController < ApplicationController
   def show
-    @zipcode = zipcode.find(params[:id])
+  @zip_code = ZipCode.new
+  end
+  
+  def search
+  redirect_to sessions_path if params[:search] == ""
+  @search_results = SearchAPI.search_by_term(params[:search])
   end
 
-  def new
-    @zipcode = zipcode.new
-  end
+  private
 
-  def create
-    @zipcode = zipcode.new(zipcode_params)
-    @zipcode.user_id = session[:current_user_id]
-    if @zipcode.save
-      redirect_to @zipcode
-    else
-      render :new
-    end
+  def zip_code_params
+    params.require(:zip_code).permit(:zip_code)
   end
-
+  
 end
