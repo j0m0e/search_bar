@@ -3,25 +3,18 @@
 
 <head>
   <title>Search Bar</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="shortcut icon" href="http://s22.postimg.org/7wlvibuz1/searchbaricon.png?noCache=1416520239" type="image/x-icon" />
+   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 
 <body>
 
-
-<% if session[:current_user_id] %>
-  Welcome, <%= User.find(session[:current_user_id]).username %>
-  <%= link_to "Log Out", sessions_path, method: :delete %>
-<% else %>
-	<%= link_to "Log In", login_path %> |
-	<%= link_to "Sign Up", new_user_path %>
-<% end %>
-
 <br>
-
+<div id="main">
 <%= yield %>
+</div>
 
 </body>
 </html>
