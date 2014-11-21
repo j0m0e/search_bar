@@ -1,12 +1,14 @@
-<% @search_results["businesses"].each do |bar| %>
+<% @search_results["businesses"].each do |bar| %><br/>
 
-Name: <%= bar["name"].capitalize %> 
+Name: <%= bar["name"].titleize %> <br/>
+
+<img src= "<%=bar["image_url"]%>"><br/>
 
 Address: <% bar["location"]["display_address"].each do |address|%> 
 				 <%= address %></br>
 				 <% end %>
 
-Rating: <img src= "<%=bar["rating_img_url_small"]%>">
+Rating: <img src= "<%=bar["rating_img_url_small"]%>"><br/>
+<hr><br/>
 
-<img src= "<%=bar["image_url"]%>">
 <% end %>
