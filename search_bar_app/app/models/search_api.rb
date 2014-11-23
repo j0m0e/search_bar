@@ -17,17 +17,15 @@ class SearchAPI
 	end
 
 	def self.search_for_bar(quiz_results, zip_code) 
-	parameters = { term: "bars",
-								 category_filter: quiz_results,
-								 location: zip_code,
-								 limit: 3}
+	params = { term: "bars",
+						 category_filter: "quiz_results",
+						 location: zip_code,
+						 limit: 3}
 	client = make_client
-	results = client.search(zip_code, parameters).to_json
+	results = client.search(zip_code, params).to_json
 	parsed_results = JSON.parse(results)
 	end
 
 # returns 3 results in an array of JSON objects
 
 end
-
-
