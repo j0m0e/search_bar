@@ -18,7 +18,7 @@ class SearchAPI
 
 	
 
-	def self.search_for_bar(search_term, zipcode) 
+	def self.search_for_bar(search_term, zip_code) 
 	params = { term: "bars", 
 		category_filter: search_term, 
 		location: zipcode, 
@@ -28,7 +28,7 @@ class SearchAPI
 	parsed_results = JSON.parse(results)
 	end
 
-# returns 3 results in an array of JSON objects
+
 
 end
 
