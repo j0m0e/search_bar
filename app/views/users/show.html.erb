@@ -1,54 +1,9 @@
 TEST
 
-<<<<<<< HEAD
 USER id: <%= @user.id %>
 
 <% @businesses.each do |bar| %>
 	<%= bar.business_id %>
 <% end %>
-||||||| merged common ancestors
-USER id: <%= @user.id %>
-=======
-<<<<<<< HEAD
-USER id: <%= @user.id %>
-||||||| merged common ancestors
-if <% session[:current_user_id] %>
-<%= ZipCode.find_by(session[:current_zip_code]) %>
-<% end %>
 
-<!-- History of results -->
-<p>
-	<% if @zip_codes.any? %>
-		<% @zip_codes.each do |zip_code| %>
-			<p>
-				<%= link_to zip_code, sessions_path(zip_code) %> 
-				<%= button_to 'Remove from List', 
-						{ action: 'remove_zip_code' },
-						method: :put,
-						params: { zip_code_id: zip_code.id },
-						data: { confirm: "Remove Zipcode?" } 
-				%>
-			<% end %>
-			<% end %>	
-			</p>
-=======
-if <% session[:current_user_id] %>
-<%= ZipCode.find_by(session[:current_zip_code]) %>
-<% end %>
 
-<!-- History of results -->
-<p>
-	<% if @zip_codes.any? %>
-		<% @zip_codes.each do |zip_code| %>
-			<p>
-				<%= link_to zip_code, sessions_path(zip_code) %> 
-				<%= button_to 'Remove from List', 
-						{ action: 'remove_zip_code' },
-						method: :put,
-						params: { zip_code_id: zip_code.id },
-						data: { confirm: "Remove Zipcode?" } %>
-			<% end %>
-			<% end %>	
-			</p>
->>>>>>> origin/css
->>>>>>> master
