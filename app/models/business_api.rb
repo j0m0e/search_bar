@@ -20,5 +20,6 @@ class BusinessAPI < ActiveRecord::Base
 
 
 
+
 end
 
