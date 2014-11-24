@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     @businesses = @user.bars.all
     @businesses.each { |bar| bar.business_id }
     @business_info = BusinessAPI.retrieve_business(business_id)['name']
+    @user = User.find(params[:id])
   end
 
 
