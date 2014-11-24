@@ -14,12 +14,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    
+    @user = User.find(params[:id])
   end
 
   def add_bar
     @user = User.find(session[:current_user_id])
-    binding.pry
     redirect_to @user  
   end 
 

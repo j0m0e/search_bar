@@ -33,7 +33,7 @@ class QuizImagesController < ApplicationController
 
 	def form_2_submit
 		if session[:value_array].push((params[:value]).to_i)
-			redirect_to "/bars"          #quiz_images_3_path
+			redirect_to results_path         #quiz_images_3_path
 		else
 			redirect_to '/'	
 		end	
