@@ -1,28 +1,14 @@
-<<<<<<< HEAD
-<% @search_results[:business].each do |bar| %>
-
-Name: <%= bar[:name].capitalize %> 
-
-Address: <% bar[:address].map do |address|%> 
-				 <%= address %></br>
-				 <% end %>
-
-Rating: <img src= "<%=bar[:rating_img_url_small]%>">
-
-<img src= "<%=bar[:image_url]%>">
-=======
 <% @search_results["businesses"].each do |bar| %><br/>
 
-Name: <%= bar["name"].titleize %> <br/>
+	Name: <%= bar["name"].titleize %> <br/>
 
-<img src= "<%=bar["image_url"]%>"><br/>
+	<img src= "<%=bar["image_url"]%>"><br/>
 
-Address: <% bar["location"]["display_address"].each do |address|%> 
-				 <%= address %></br>
-				 <% end %>
+	Address: <% bar["location"]["display_address"].each do |address|%> 
+		<%= address %></br>
+	<% end %>
 
-Rating: <img src= "<%=bar["rating_img_url_small"]%>"><br/>
-<hr><br/>
+	Rating: <img src= "<%=bar["rating_img_url_small"]%>"><br/>
+	<hr><br/>
 
->>>>>>> ce09a43935169b306f722dca60db9b0ce06946a2
 <% end %>

@@ -1,4 +1,4 @@
-<div id = "nav")
+<div id = "nav">
 <% if session[:current_user_id] %>
   <%= link_to "Log Out", sessions_path, method: :delete %>
 <% else %>
@@ -10,10 +10,11 @@
 <div id = 'welcome'>
 <% if session[:current_user_id] %>
   Welcome, <%= User.find(session[:current_user_id]).username %>
-<%= form_tag ('/bars') do %>
-<%= label_tag :zip_code %><br>
-<%= text_field_tag :zip_code %><br>
-<%= submit_tag 'Submit'%>
+	<%= form_tag ('/bars') do %>
+	<%= label_tag :zip_code %><br>
+	<%= text_field_tag :zip_code %><br>
+	<%= submit_tag 'Submit'%>
+	<% end %>
 <% end %>  
 </div>
 
