@@ -1,3 +1,7 @@
 TEST
 
 USER id: <%= @user.id %>
+
+<% @businesses.each do |bar| %>
+	<%= bar.business_id %>
+<% end %>
