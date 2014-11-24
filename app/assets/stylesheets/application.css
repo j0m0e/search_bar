@@ -14,13 +14,32 @@
  *= require_self
  */
 
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
 
 body {
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  background: ("backgroundimage.jpg")
+  background: url("backgroundimage.jpg");
+  font-family: Raleway;
 }
+
+
+#main {
+  font-size: 20px;
+  color: white;
+
+
+}
+
 
 .quiz_grid {
   height: 80%;
@@ -29,16 +48,37 @@ body {
 }
 
 .quiz_image input{
-    width: 48%;
-    height: 47%;
-    float: left;
-    border-radius: 12px;
-    padding: 6px;
+  width: 48%;
+  height: 47%;
+  float: left;
+  border-radius: 12px;
+  padding: 6px;
 }
 
+#logo {
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
 
+#title {
+  text-align: center;
+  font-family: Roboto Slab;
+  font-size: 80px;
+  color: white;
+}
 
+#nav {
+  font-size: 20px;
+  color: white;
+  margin-left: auto;
+}
 
-
+#zip {
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
