@@ -1,36 +1,38 @@
+<body class = 'homepage'>
+
 <section id = "nav">
 
-<div id = "links">
-<% if session[:current_user_id] %>
-  Welcome, <%= User.find(session[:current_user_id]).username.capitalize %>
-  <%= link_to "LOG OUT", sessions_path, method: :delete %>
-	<% else %>
-	<%= link_to "LOG IN", login_path %> | 
-	<%= link_to "SIGN UP", new_user_path %>
-<% end %>
-</div>
+	<div id = "links">
+		<% if session[:current_user_id] %>
+  	Welcome, <%= User.find(session[:current_user_id]).username.capitalize %>
+  	<%= link_to "LOG OUT", sessions_path, method: :delete %>
+		<% else %>
+		<%= link_to "LOG IN", login_path %> | 
+		<%= link_to "SIGN UP", new_user_path %>
+	<% end %>
+	</div>
 
-<div id = 'logo'>
-	<%= image_tag "searchbarlogo.png" %>
-</div>
+	<div id = 'logo'>
+		<%= image_tag "searchbarlogo.png" %>
+	</div>
 
 </section>
 
-
-<article id = 'title'>
-<br>SEARCH BAR</br>
-</article>
+	<article id = 'title'>
+	<br>SEARCH BAR</br>
+	</article>
 
 <p>
-<div id = 'zipform'>
-<%= form_tag ('/bars') do %>
-<span><%= label_tag :zip_code %>: </span> 
-<span><%= text_field_tag :zip_code %></span>
-<%= submit_tag 'SUBMIT' %>
-<% end %> 
-</div>
+	<div id = 'zipform'>
+		<%= form_tag ('/bars') do %>
+			<span><%= label_tag :zip_code %>: </span> 
+			<span><%= text_field_tag :zip_code %></span>
+			<%= submit_tag 'SUBMIT' %>
+		<% end %> 
+	</div>
 </p>
 
+</body>
 
 <%# if session[:current_user_id] %>
   <%# User.find_by(session[:current_user_id].zip_codes.push[:zip_code])%>

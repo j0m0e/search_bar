@@ -33,12 +33,20 @@ a:hover {
   color: white;
 }
 
+body.homepage {
+  font-family: Raleway;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  background: url(<%= image_path 'searchbar1.jpg' %>) no-repeat center center fixed;
+}
+
 body {
+  font-family: Raleway;
   height: 100%;
   width: 100%;
   margin: 0 auto;
   background: url(<%= image_path 'backgroundimage.jpg' %>) no-repeat center center fixed;
-  font-family: Raleway;
 }
 
 #homeicon {
@@ -47,7 +55,6 @@ body {
   top: 2%;
   opacity: 0.6;
 }
-
 
 #main {
   font-size: 20px;
@@ -69,6 +76,7 @@ body {
   padding: 6px;
 }
 
+
 #logo {
   width: 240px;
   margin-left: auto;
@@ -81,42 +89,11 @@ body {
   font-family: Roboto Slab;
   font-size: 110px;
   color: mintcream;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
   margin-top: -80px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-.button {
-  font-size: 20px;
-  text-align: center;
-  float: left;
-  width: 5%;
-  padding: 0.5%;
-  margin-right: 0.5%;
-  border: 3px solid white;
-}
-
->>>>>>> 6add07de137bd377691d3db437e4bb5336d0d5a3
-.button {
-  font-size: 20px;
-  color: black;
-  margin-left: auto;
-  color: white;
-  margin-left: auto;
-  text-align: center;
-  float: left;
-  width: 5%;
-  padding: 0.5%;
-  margin-right: 0.5%;
-  border: 3px solid white;
-}
-
-<<<<<<< HEAD
->>>>>>> 52735cd7cc43c720bf9f024ed090757b08edfe47
-=======
->>>>>>> 6add07de137bd377691d3db437e4bb5336d0d5a3
 #nav {
   color: white;
 }
@@ -156,7 +133,6 @@ h1 {
   font-size: 50px;
   color: mintcream;
 }
-
 
 .form {
   width: 250px;
