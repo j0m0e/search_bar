@@ -28,5 +28,10 @@ Rails.application.routes.draw do
   post "/bars", to: "bars#search"
   get "/bars", to: "bars#results"
 
+
+  #USERS ROUTE
+
+  put "/users", to: "users#add_bar"
+  get "/users/:id", to: "users#show"
   
 end
