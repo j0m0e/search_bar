@@ -12,9 +12,15 @@
 <body>
 
 <br>
-<div id="main">
-<%= yield %>
+
+<section id="main">
+
+<div id= 'homeicon'>
+	<%= link_to(image_tag("searchbarheader.png"), root_path) %>
 </div>
+
+<%= yield %>
+</section>
 
 </body>
 </html>
