@@ -14,15 +14,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(session[:current_user_id])
-    @businesses = @user.bars.all
-    @businesses.each { |bar| bar.business_id }
-    @business_info = BusinessAPI.retrieve_business(business_id)['name']
-    @user = User.find(params[:id])
+    user = User.find(session[:current_user_id])
+    @businesses = user.bars.all
   end
-
-
-
 
   def add_bar
     user = User.find(session[:current_user_id])

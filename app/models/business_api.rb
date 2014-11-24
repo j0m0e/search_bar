@@ -18,6 +18,7 @@ class BusinessAPI < ActiveRecord::Base
 		parsed_business = JSON.parse(business)
 	end
 
+	
 
 
 
