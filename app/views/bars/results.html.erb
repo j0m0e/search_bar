@@ -9,6 +9,16 @@
 	<% end %>
 
 	Rating: <img src= "<%=bar["rating_img_url_small"]%>"><br/>
+	
+	<% if session[:current_user_id] %>
+		<%= form_tag '/users', :method => :put do |f| %>
+			<%= hidden_field_tag :business_id, bar["id"] %>
+			<%= submit_tag "add this bar to your list" %>
+		<% end %>
+					
+	<% end %>	
+	
 	<hr><br/>
+
 
 <% end %>
