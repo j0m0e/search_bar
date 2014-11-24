@@ -5,7 +5,7 @@ class BarsController < ApplicationController
 	end	
 
 	def results
-		QuizImage.quiz_results(session[:value_array])
+		Bar.quiz_results(session[:value_array])
 		@search_results = SearchAPI.search_for_bar(@quiz_results, session[:zip_code])
 		binding.pry
 	end	
