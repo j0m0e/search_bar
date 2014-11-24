@@ -14,12 +14,21 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(session[:current_user_id])
+    @businesses = @user.bars.all
+    @businesses.each { |bar| bar.business_id }
+    @business_info = BusinessAPI.retrieve_business(business_id)['name']
     @user = User.find(params[:id])
   end
 
+
+
+
   def add_bar
-    @user = User.find(session[:current_user_id])
-    redirect_to @user  
+    user = User.find(session[:current_user_id])
+    bar = Bar.find_or_create_by(business_id: params[:business_id])
+    user.add_bar(bar)
+    redirect_to user  
   end 
 
   private
