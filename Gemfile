@@ -30,8 +30,6 @@ gem 'pry-rails', group: :development
 
 gem 'httparty'
 
-gem 'bcrypt', '~> 3.1.7'
-
 gem 'yelp'
 
 gem 'awesome_print'
