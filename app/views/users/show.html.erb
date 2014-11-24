@@ -14,8 +14,7 @@ if <% session[:current_user_id] %>
 						{ action: 'remove_zip_code' },
 						method: :put,
 						params: { zip_code_id: zip_code.id },
-						data: { confirm: "Remove Zipcode?" } 
-				%>
+						data: { confirm: "Remove Zipcode?" } %>
 			<% end %>
 			<% end %>	
 			</p>

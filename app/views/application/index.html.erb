@@ -1,12 +1,23 @@
-<div id = "nav">
+<section id = "nav">
 <% if session[:current_user_id] %>
-  Welcome, <%= User.find(session[:current_user_id]).username %>
+  Welcome, <%= User.find(session[:current_user_id]).username.capitalize %>
+
+ <div class = "button">
   <%= link_to "LOG OUT", sessions_path, method: :delete %>
-<% else %>
-	<%= link_to "LOG IN", login_path %> |
+	<% else %>
+	</div>
+
+	<div class = "button">
+	<%= link_to "LOG IN", login_path %> 
+	</div>
+
+	<div class = "button">
 	<%= link_to "SIGN UP", new_user_path %>
+	</div>
+
 <% end %>
-</div>
+</section>
+
 
 
 <p>
@@ -15,18 +26,25 @@
 </div>
 </p>
 
-
 <article id = 'title'>
 <br>SEARCH BAR</br>
 </article>
 
-<div id = 'zip'>
+<p>
+<section id = 'zipform' class="search">
 <%= form_tag ('/bars') do %>
-<%= label_tag :zip_code %><br>
+
+<span><%= label_tag :zip_code %>: </span> 
+
 <%= text_field_tag :zip_code %><br>
-<%= submit_tag 'SUBMIT'%> 
-<% end %> 
+
+<div id = 'submit'>
+<%= submit_tag 'SUBMIT' %>
 </div>
+
+<% end %> 
+</section>
+</p>
 
 
 <%# if session[:current_user_id] %>
