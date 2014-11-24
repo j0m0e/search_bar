@@ -1,10 +1,16 @@
-TEST
-
-USER id: <%= @user.id %>
 
 <% @businesses.each do |bar| %>
-	<%= bar.business_id %>
-	binding.pry
+	<h2><%= BusinessAPI.retrieve_business(bar.business_id)["name"].titleize %><br/></h2>
+	<img src="<%= (BusinessAPI.retrieve_business(bar.business_id)["image_url"]) %>"><br/>
+	<%= BusinessAPI.retrieve_business(bar.business_id)["location"]["display_address"][0] %><br/>
+	<%= BusinessAPI.retrieve_business(bar.business_id)["location"]["display_address"][1] %><br/>
+	<%= BusinessAPI.retrieve_business(bar.business_id)["location"]["display_address"][2] %><br/>
+	<%= BusinessAPI.retrieve_business(bar.business_id)["phone"] %><br/>
+	<img src="<%= (BusinessAPI.retrieve_business(bar.business_id)["rating_img_url_small"]) %>" ><br/>
 <% end %>
+
+
+
+
 
 
