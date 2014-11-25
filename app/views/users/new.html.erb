@@ -6,9 +6,10 @@
 
 <hr>
 
-<section class ='form'>
 <%= form_for @user do |f| %>
-  <%= f.label :username %><br>
+
+<div class='field'>
+	<%= f.label :username %><br>
   <%= f.text_field :username %><br>
 
   <%= f.label :password %><br>
@@ -18,7 +19,6 @@
   <%= f.password_field :password_confirmation %><br>
 
   <br><%= f.submit %>
-
-</section>
+</div>
 
 <% end %>
