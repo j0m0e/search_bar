@@ -6,4 +6,5 @@ class ApplicationController < ActionController::Base
     render :index
     end	
 
+
 end

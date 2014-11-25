@@ -20,7 +20,7 @@ class SearchAPI
 		parameters = { term: "bars",
 								 category_filter: quiz_results,
 								 location: location,
-								 limit: 3}
+								 limit: 5}
 		client = make_client
 		results = client.search(location, parameters).to_json
 		parsed_results = JSON.parse(results)
