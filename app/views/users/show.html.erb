@@ -1,15 +1,28 @@
 <h1> Hi, <%= User.find(session[:current_user_id]).username.capitalize %></h1>
 
+<hr>
+
 <section class ='results'>
+
+<div class = 'resultsname'>
 <% @businesses.each do |bar| %>
-	<h2><%= link_to (BusinessAPI.retrieve_business(bar.business_id)["name"].titleize), BusinessAPI.retrieve_business(bar.business_id)["url"]%><br/></h2>
-	<img src="<%= (BusinessAPI.retrieve_business(bar.business_id)["image_url"]) %>"><br/>
-	<%= BusinessAPI.retrieve_business(bar.business_id)["location"]["display_address"][0] %><br/>
-	<%= BusinessAPI.retrieve_business(bar.business_id)["location"]["display_address"][1] %><br/>
-	<%= BusinessAPI.retrieve_business(bar.business_id)["location"]["display_address"][2] %><br/>
-	<%= BusinessAPI.retrieve_business(bar.business_id)["phone"] %><br/>
-	<img src="<%= (BusinessAPI.retrieve_business(bar.business_id)["rating_img_url_small"]) %>" ><br/>
+<%= link_to (BusinessAPI.retrieve_business(bar.business_id)["name"].titleize), BusinessAPI.retrieve_business(bar.business_id)["url"]%></br>
+</div>
+
+<div class='resultsimg'>
+<img src="<%= (BusinessAPI.retrieve_business(bar.business_id)["image_url"]) %>"></br>
+</div>
+
+
+<%= BusinessAPI.retrieve_business(bar.business_id)["location"]["display_address"][0] %></br>
+	<%= BusinessAPI.retrieve_business(bar.business_id)["location"]["display_address"][1] %></br>
+	<%= BusinessAPI.retrieve_business(bar.business_id)["location"]["display_address"][2] %></br>
+	<%= BusinessAPI.retrieve_business(bar.business_id)["phone"] %></br>
+
+Rating: <img src="<%= (BusinessAPI.retrieve_business(bar.business_id)["rating_img_url_small"]) %>" ></br>
 <% end %>
+
+<hr>
 
 </section>
 
