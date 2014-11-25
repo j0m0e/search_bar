@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
+     
   end
 
   def create
@@ -9,7 +10,8 @@ class SessionsController < ApplicationController
       session[:current_user_id] = user.id
       redirect_to '/'
     else
-      redirect_to login_path
+      @errors = "username and/or password are incorrect"
+      render :new
     end
 
   end

@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def show
-   if session[:current_user_id] == nil 
+    if session[:current_user_id] == nil 
       redirect_to root_path
     else
       user = User.find(session[:current_user_id])
