@@ -2,11 +2,14 @@
 
 <hr>
 
-<section class='results'>
 
+
+
+<section class='results'>
 <% if @search_results["businesses"].count == 0 %>
-	<%= link_to "your search yielded no results. please try again", '/' %>
+	<%= link_to "Your search yielded no results. Please try again.", '/', style: 'color:black;'%>
 <% end %>	
+
 
 <div class='resultsname'>
 <% @search_results["businesses"].each do |bar| %></br>
