@@ -6,12 +6,8 @@ class BarsController < ApplicationController
 	end	
 
 	def results
-		Bar.quiz_results(session[:value_array])
-		@search_results = SearchAPI.search_for_bar(@quiz_results, session[:zip_code])
+		find_quiz_results = QuizImage.quiz_results(session[:value_array])
+		@search_results = SearchAPI.search_for_bar(find_quiz_results, session[:zip_code])
 	end	
 
 end
-
-		# if session[:current_user_id]
-		# 	@user = User.find(session[:current_user_id])
-		# end
