@@ -5,7 +5,7 @@ class BarsController < ApplicationController
 		if session[:location] == ""
 			redirect_to root_path
 		else
-			redirect_to "/quiz_images/1"
+			redirect_to "/quiz_images"
 			session[:categories_seen] = []
 			session[:value_array] = []
 		end

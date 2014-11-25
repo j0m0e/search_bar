@@ -1,109 +1,30 @@
 class QuizImagesController < ApplicationController
 
-	def form_1
-		categories = QuizImage.generate_unique_categories
-		current_category = categories.sample
-		page1_image_array = QuizImage.get_quiz_images_for_category(current_category)
-
-		@category_1_quiz_image1 = page1_image_array[0]
-		@category_1_quiz_image2 = page1_image_array[1]
-		@category_1_quiz_image3 = page1_image_array[2]
-		@category_1_quiz_image4 = page1_image_array[3]
-		
-		session[:categories_seen] = [current_category]
-		
-		render :image_grid_one
-	end	
-
-	def form_1_submit
-		session[:value_array] = []
-		if session[:value_array].push((params[:value]).to_i)
-			redirect_to quiz_images_2_path
-		else
-			redirect_to '/'	
-		end	
-	end	
-
-	def form_2
+	def form
 		remaining_categories = QuizImage.generate_unique_categories.delete_if do |category| 
 			session[:categories_seen].include?(category)
 		end
 		current_category = remaining_categories.sample
-		page2_image_array = QuizImage.get_quiz_images_for_category(current_category)
+		page_image_array = QuizImage.get_quiz_images_for_category(current_category)
 
-		@category_2_quiz_image1 = page2_image_array[0]
-		@category_2_quiz_image2 = page2_image_array[1]
-		@category_2_quiz_image3 = page2_image_array[2]
-		@category_2_quiz_image4 = page2_image_array[3]
-			
+		@category_1_quiz_image1 = page_image_array[0]
+		@category_1_quiz_image2 = page_image_array[1]
+		@category_1_quiz_image3 = page_image_array[2]
+		@category_1_quiz_image4 = page_image_array[3]
+		
 		session[:categories_seen].push(current_category)
-		render :image_grid_two
-	end
-
-	def form_2_submit
-		if session[:value_array].push((params[:value]).to_i)
-			redirect_to quiz_images_3_path  
-		else
-			redirect_to '/'	
-		end	
-	end
-
-	def form_3
-		page3_image_array = QuizImage.random_array_of_five[2].shuffle
-
-		@category_3_quiz_image1 = page3_image_array[0]
-		@category_3_quiz_image2 = page3_image_array[1]
-		@category_3_quiz_image3 = page3_image_array[2]
-		@category_3_quiz_image4 = page3_image_array[3]
 		
-		render :image_grid_three
-	end
+		render :image_grid
+	end	
 
-	def form_3_submit
-		if session[:value_array].push((params[:value]).to_i)
-			redirect_to quiz_images_4_path 
+	def form_submit
+		session[:value_array].push((params[:value]).to_i)
+		if session[:categories_seen].count < 5
+			redirect_to quiz_images_path
 		else
-			redirect_to '/'	
-		end	
-	end
-
-	def form_4
-		page4_image_array = QuizImage.random_array_of_five[3].shuffle
-
-		@category_4_quiz_image1 = page4_image_array[0]
-		@category_4_quiz_image2 = page4_image_array[1]
-		@category_4_quiz_image3 = page4_image_array[2]
-		@category_4_quiz_image4 = page4_image_array[3]
-		
-		render :image_grid_four
-	end
-
-	def form_4_submit
-		if session[:value_array].push((params[:value]).to_i)
-			redirect_to quiz_images_5_path 
-		else
-			redirect_to '/'	
-		end	
-	end
-
-	def form_5
-		page5_image_array = QuizImage.random_array_of_five[4].shuffle
-
-		@category_5_quiz_image1 = page5_image_array[0]
-		@category_5_quiz_image2 = page5_image_array[1]
-		@category_5_quiz_image3 = page5_image_array[2]
-		@category_5_quiz_image4 = page5_image_array[3]
-		
-		render :image_grid_five
-	end
-
-	def form_5_submit
-		if session[:value_array].push((params[:value]).to_i)
-			redirect_to results_path 
-		else
-			redirect_to '/'	
-		end	
-	end
+			redirect_to results_path
+		end		
+	end	
 
 	def quiz_image_params
 		params.require(:quiz_image).permit(:name, :filepath, :category, :value)
