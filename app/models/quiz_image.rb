@@ -12,10 +12,10 @@ class QuizImage < ActiveRecord::Base
 	end
 
 	def self.generate_category_2_image_array
-		category_2_image_array = ([(QuizImage.where( :category => "tv_show", :value => 1 ).sample),
-																(QuizImage.where( :category => "tv_show", :value => 34 ).sample),
-																(QuizImage.where( :category => "tv_show", :value => 67 ).sample),
-																(QuizImage.where( :category => "tv_show", :value => 100 ).sample)]).shuffle
+		category_2_image_array = ([(QuizImage.where( :category => "tv_shows", :value => 1 ).sample),
+																(QuizImage.where( :category => "tv_shows", :value => 34 ).sample),
+																(QuizImage.where( :category => "tv_shows", :value => 67 ).sample),
+																(QuizImage.where( :category => "tv_shows", :value => 100 ).sample)]).shuffle
 		return category_2_image_array
 	end
 
@@ -28,10 +28,10 @@ class QuizImage < ActiveRecord::Base
 	end
 
 	def self.generate_category_4_image_array
-		category_1_image_array = ([(QuizImage.where( :category => "clothing", :value => 1 ).sample),
-																(QuizImage.where( :category => "clothing", :value => 34 ).sample),
-																(QuizImage.where( :category => "clothing", :value => 67 ).sample),
-																(QuizImage.where( :category => "clothing", :value => 100 ).sample)]).shuffle
+		category_1_image_array = ([(QuizImage.where( :category => "jackets", :value => 1 ).sample),
+																(QuizImage.where( :category => "jackets", :value => 34 ).sample),
+																(QuizImage.where( :category => "jackets", :value => 67 ).sample),
+																(QuizImage.where( :category => "jackets", :value => 100 ).sample)]).shuffle
 		return category_1_image_array
 	end
 
