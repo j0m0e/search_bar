@@ -1,13 +1,14 @@
 <section class='results'>
 
-<%= link_to bar['name'].titleize, bar["url"] %> <br/>
+
 <% @search_results["businesses"].each do |bar| %></br>
+<%= link_to bar['name'].titleize, bar["url"] %> <br/>
 	
 <div class='resultsimg'>
 <img src= "<%=bar["image_url"]%>"></br>
 </div>
 
-<%= bar["name"].upcase %> </p>
+
 
 <% bar["location"]["display_address"].each do |address|%> 
 	<%= address %></br>
