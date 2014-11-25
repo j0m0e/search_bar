@@ -6,16 +6,8 @@ Rails.application.routes.draw do
   root 'application#index'
 
   #QUIZ IMAGES ROUTES
-  get "/quiz_images/1", to: "quiz_images#form_1"
-  post "/quiz_images/1", to: "quiz_images#form_1_submit"
-  get "/quiz_images/2", to: "quiz_images#form_2"
-  post "/quiz_images/2", to: "quiz_images#form_2_submit"
-  get "/quiz_images/3", to: "quiz_images#form_3"
-  post "/quiz_images/3", to: "quiz_images#form_3_submit"
-  get "/quiz_images/4", to: "quiz_images#form_4"
-  post "/quiz_images/4", to: "quiz_images#form_4_submit"
-  get "/quiz_images/5", to: "quiz_images#form_5"
-  post "/quiz_images/5", to: "quiz_images#form_5_submit"
+  get "/quiz_images", to: "quiz_images#form"
+  post "/quiz_images", to: "quiz_images#form_submit"
 
   #SESSIONS ROUTE
   get 'sessions/new' => 'sessions#new', as: 'login'

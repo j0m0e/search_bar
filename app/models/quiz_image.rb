@@ -15,19 +15,6 @@ class QuizImage < ActiveRecord::Base
     QuizImage.where(category: category).shuffle
   end  
 
-
-
-
-
-  # def self.generate_main_array
-  #  main_array = [ QuizImage.where( category: "jackets"), QuizImage.where( category: "tv_shows"),
-  #  QuizImage.where( category: "drinks"), QuizImage.where( category: "shoes"), QuizImage.where( category: "coffees") ]
-  # end		 
-
-  # def self.random_array_of_five
-  #   random_array_of_five = ((QuizImage.generate_main_array).shuffle).sample(5)
-  # end 
-
 	def self.quiz_results(value_array)
 		quiz_total = (((value_array).reduce(:+))/5).round
 		if quiz_total.between?(1,25)

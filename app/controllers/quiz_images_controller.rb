@@ -1,6 +1,6 @@
 class QuizImagesController < ApplicationController
 
-	def form_1
+	def form
 		remaining_categories = QuizImage.generate_unique_categories.delete_if do |category| 
 			session[:categories_seen].include?(category)
 		end
@@ -14,13 +14,13 @@ class QuizImagesController < ApplicationController
 		
 		session[:categories_seen].push(current_category)
 		
-		render :image_grid_one
+		render :image_grid
 	end	
 
-	def form_1_submit
+	def form_submit
 		session[:value_array].push((params[:value]).to_i)
 		if session[:categories_seen].count < 5
-			redirect_to quiz_images_1_path
+			redirect_to quiz_images_path
 		else
 			redirect_to results_path
 		end		
