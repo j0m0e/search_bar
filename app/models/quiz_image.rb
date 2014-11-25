@@ -3,40 +3,18 @@ class QuizImage < ActiveRecord::Base
   validates :filepath, presence: true, uniqueness: true
   validates :category, presence: true
 
-	def self.generate_category_1_image_array
-		category_1_image_array = ([(QuizImage.where( :category => "shoes", :value => 1 ).sample),
-																(QuizImage.where( :category => "shoes", :value => 34 ).sample),
-																(QuizImage.where( :category => "shoes", :value => 67 ).sample),
-																(QuizImage.where( :category => "shoes", :value => 100 ).sample)]).shuffle
-		return category_1_image_array
-	end
+  def self.generate_random_array_of_five
+   main_array = [ [QuizImage.where( category: "jackets")], [QuizImage.where( category: "tv_shows")],
+   [QuizImage.where( category: "drinks")], [QuizImage.where( category: "shoes")], [QuizImage.where( category: "coffees")] ]
+   return main_array.shuffle.sample(5)
+  end		 
 
-	def self.generate_category_2_image_array
-		category_2_image_array = ([(QuizImage.where( :category => "tv_shows", :value => 1 ).sample),
-																(QuizImage.where( :category => "tv_shows", :value => 34 ).sample),
-																(QuizImage.where( :category => "tv_shows", :value => 67 ).sample),
-																(QuizImage.where( :category => "tv_shows", :value => 100 ).sample)]).shuffle
-		return category_2_image_array
-	end
-
-	def self.generate_category_3_image_array
-		category_1_image_array = ([(QuizImage.where( :category => "drinks", :value => 1 ).sample),
-																(QuizImage.where( :category => "drinks", :value => 34 ).sample),
-																(QuizImage.where( :category => "drinks", :value => 67 ).sample),
-																(QuizImage.where( :category => "drinks", :value => 100 ).sample)]).shuffle
-		return category_1_image_array
-	end
-
-	def self.generate_category_4_image_array
-		category_1_image_array = ([(QuizImage.where( :category => "jackets", :value => 1 ).sample),
-																(QuizImage.where( :category => "jackets", :value => 34 ).sample),
-																(QuizImage.where( :category => "jackets", :value => 67 ).sample),
-																(QuizImage.where( :category => "jackets", :value => 100 ).sample)]).shuffle
-		return category_1_image_array
-	end
+  def self.random_array_of_five
+  	random_array_of_five = (QuizImage.generate_random_array_of_five)
+  end	
 
 	def self.quiz_results(value_array)
-		quiz_total = (((value_array).reduce(:+))/3).round
+		quiz_total = (((value_array).reduce(:+))/5).round
 		if quiz_total.between?(1,25)
 			return @quiz_results = "divebars,poolhalls"
 		elsif quiz_total.between?(26,50)

@@ -1,16 +1,30 @@
-
-
 <div class="quiz_grid">
-<%= form_tag('/quiz_images/4') %>
-<%= hidden_field_tag 'quiz_image[:value]' %>
-<%= image_submit_tag "leather_jacket.jpg" %>
-<%= form_tag('/quiz_images/4') %>
-<%= hidden_field_tag 'quiz_image[:value]' %>
-<%= image_submit_tag "leather_jacket.jpg" %>
-<%= form_tag('/quiz_images/4') %>
-<%= hidden_field_tag 'quiz_image[:value]' %>
-<%= image_submit_tag "leather_jacket.jpg" %>
-<%= form_tag('/quiz_images/4') %>
-<%= hidden_field_tag 'quiz_image[:value]' %>
-<%= image_submit_tag "leather_jacket.jpg" %>
-</div>
+	<div class="quiz_image">
+		<%= form_tag('/quiz_images/4') do %>
+		<%= hidden_field_tag [:value], (@category_4_quiz_image1.value) %>
+		<%= image_submit_tag @category_4_quiz_image1.filepath %>
+		<% end %>
+	</div>	
+
+	<div class="quiz_image">
+		<%= form_tag('/quiz_images/4') do %>
+		<%= hidden_field_tag [:value], (@category_4_quiz_image2.value) %>
+		<%= image_submit_tag @category_4_quiz_image2.filepath %>
+		<% end %>
+	</div>	
+
+	<div class="quiz_image">
+		<%= form_tag('/quiz_images/4') do %>
+		<%= hidden_field_tag [:value], (@category_4_quiz_image3.value) %>
+		<%= image_submit_tag @category_4_quiz_image3.filepath %>
+		<% end %>
+	</div>	
+
+	<div class="quiz_image">
+		<%= form_tag('/quiz_images/4') do %>
+		<%= hidden_field_tag [:value], (@category_4_quiz_image4.value) %>
+		<%= image_submit_tag @category_4_quiz_image4.filepath %>
+		<% end %>
+	</div>
+</div>	
+
