@@ -26,14 +26,6 @@
 	<div id = 'zipform'>
 		<%= form_tag ('/bars') do %>
 			<span><%= label_tag :location, "search by zip code or location" %><h6>example: '11211' or 'williamsburg, brooklyn'</h6></span> 
-			<span><%= text_field_tag :location %></span>
-			<%= submit_tag 'SEARCH' %>
-			<span><%= label_tag :zip_code %>: </span> 
-			<span><%= text_field_tag :zip_code %></span>
-			<%= submit_tag 'SUBMIT' %>
-			<span><%= label_tag :zip_code %> </span>
-			<%= text_field_tag :zip_code %>
-			<%= submit_tag 'SUBMIT' %>
 		<% end %> 
 	</div>
 </p>
