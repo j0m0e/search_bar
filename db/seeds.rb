@@ -79,7 +79,23 @@ quiz_images = QuizImage.create([
 
 													{ filepath: "coffees/latte.jpg", 
 													category: "coffees", 
-													value: "100" }													
+													value: "100" },
+#################################################################
+													{ filepath: "dogs/rotweiler.jpg", 
+													category: "dogs", 
+													value: "1" },
+													
+													{ filepath: "dogs/golden_retriever.jpg", 
+													category: "dogs", 
+													value: "34" },
+
+													{ filepath: "dogs/weimaraner.jpg", 
+													category: "dogs", 
+													value: "67" },
+
+													{ filepath: "dogs/poodle.jpg", 
+													category: "dogs", 
+													value: "100" }																										
 
 													])
 

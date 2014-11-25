@@ -26,6 +26,13 @@ Rails.application.routes.draw do
   #USERS ROUTE
 
   put "/users", to: "users#add_bar"
+<<<<<<< HEAD
 
   
+||||||| merged common ancestors
+  get "/users/:id", to: "users#show"
+  
+=======
+
+>>>>>>> 99ecbc52046fe05c7b74368abad55dae9d6821d2
 end

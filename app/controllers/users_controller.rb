@@ -15,8 +15,14 @@ class UsersController < ApplicationController
   end
 
   def show
+<<<<<<< HEAD
     
    if session[:current_user_id] != params[:id].to_i 
+||||||| merged common ancestors
+   if session[:current_user_id] == nil 
+=======
+    if session[:current_user_id] == nil 
+>>>>>>> 99ecbc52046fe05c7b74368abad55dae9d6821d2
       redirect_to root_path
     else
       user = User.find(params[:id])
