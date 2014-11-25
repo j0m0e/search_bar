@@ -2,44 +2,26 @@ QuizImage.delete_all
 
 quiz_images = QuizImage.create([ 
 												{ filepath: "beat_up_chuck_taylor.jpg", 
-													category: "clothing", 
+													category: "shoes", 
 													value: "1" },
 
 													{ filepath: "sperry_topsider.jpg", 
-													category: "clothing", 
+													category: "shoes", 
 													value: "67" },
 
-													{ filepath: "birkin_bag.jpg", 
-													category: "clothing", 
-													value: "100" },
-
 													{ filepath: "vans_sneakers.jpg", 
-													category: "clothing", 
-													value: "34" },
-
-													{ filepath: "bow_tie.jpg", 
-													category: "clothing", 
-													value: "100" },
-
-													{ filepath: "flannel_shirt.jpg", 
-													category: "clothing", 
+													category: "shoes", 
 													value: "34" },
 
 													{ filepath: "flip_flops.jpg", 
-													category: "clothing", 
+													category: "shoes", 
 													value: "34" },
 
-													{ filepath: "jean_jacket.jpg", 
-													category: "clothing", 
-													value: "34" },
+													{ filepath: "manolo_bally.jpg", 
+													category: "shoes", 
+													value: "100" },
 
-													{ filepath: "leather_jacket.jpg", 
-													category: "clothing", 
-													value: "1" },
-
-													{ filepath: "overalls.jpg", 
-													category: "clothing", 
-													value: "1" },
+############################################################
 ############################################################
 													{ filepath: "suits.jpg", 
 													category: "tv_show", 
@@ -119,7 +101,91 @@ quiz_images = QuizImage.create([
 
 													{ filepath: "always_sunny.jpg", 
 													category: "tv_show", 
-													value: "1" }
+													value: "1" },
+############################################################
+############################################################
+													{ filepath: "veuve.jpg", 
+													category: "drinks", 
+													value: "100" },
+
+													{ filepath: "cocktails.jpg", 
+													category: "drinks", 
+													value: "100" },
+
+													{ filepath: "cosmo.jpg", 
+													category: "drinks", 
+													value: "100" },
+
+													{ filepath: "red_cocktail.jpg", 
+													category: "drinks", 
+													value: "100" },
+
+													{ filepath: "moet.jpg", 
+													category: "drinks", 
+													value: "100" },
+
+													{ filepath: "martinis.jpg", 
+													category: "drinks", 
+													value: "100" },
+
+													{ filepath: "brooklyn_cocktails.jpg", 
+													category: "drinks", 
+													value: "100" },
+############################################################
+													{ filepath: "vodka_tonic.jpg", 
+													category: "drinks", 
+													value: "67" },
+
+													{ filepath: "aperol-spritz.jpg", 
+													category: "drinks", 
+													value: "67" },
+
+													{ filepath: "white_wine.jpg", 
+													category: "drinks", 
+													value: "67" },
+
+													{ filepath: "red_wine.jpg", 
+													category: "drinks", 
+													value: "67" },
+
+													{ filepath: "sangria.jpg", 
+													category: "drinks", 
+													value: "67" },
+############################################################
+													{ filepath: "guinness.jpg", 
+													category: "drinks", 
+													value: "34" },
+
+													{ filepath: "beer_flight.jpg", 
+													category: "drinks", 
+													value: "34" },
+
+													{ filepath: "beer_pint.jpg", 
+													category: "drinks", 
+													value: "34" },
+
+													{ filepath: "stella.jpg", 
+													category: "drinks", 
+													value: "34" },	
+############################################################
+													{ filepath: "shot_and_a_beer.jpg", 
+													category: "drinks", 
+													value: "1" },	
+
+													{ filepath: "pbr.jpg", 
+													category: "drinks", 
+													value: "1" },
+
+													{ filepath: "pickleback.jpg", 
+													category: "drinks", 
+													value: "1" }											
+
+
+
+
+
+
+
 													])
 
 

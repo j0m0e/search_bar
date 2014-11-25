@@ -16,13 +16,13 @@ class SearchAPI
                           })
 	end
 
-	def self.search_for_bar(quiz_results, zip_code) 
+	def self.search_for_bar(quiz_results, location) 
 		parameters = { term: "bars",
 								 category_filter: quiz_results,
-								 location: zip_code,
+								 location: location,
 								 limit: 3}
 		client = make_client
-		results = client.search(zip_code, parameters).to_json
+		results = client.search(location, parameters).to_json
 		parsed_results = JSON.parse(results)
 	end
 

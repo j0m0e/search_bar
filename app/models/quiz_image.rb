@@ -4,10 +4,10 @@ class QuizImage < ActiveRecord::Base
   validates :category, presence: true
 
 	def self.generate_category_1_image_array
-		category_1_image_array = ([(QuizImage.where( :category => "clothing", :value => 1 ).sample),
-																(QuizImage.where( :category => "clothing", :value => 34 ).sample),
-																(QuizImage.where( :category => "clothing", :value => 67 ).sample),
-																(QuizImage.where( :category => "clothing", :value => 100 ).sample)]).shuffle
+		category_1_image_array = ([(QuizImage.where( :category => "shoes", :value => 1 ).sample),
+																(QuizImage.where( :category => "shoes", :value => 34 ).sample),
+																(QuizImage.where( :category => "shoes", :value => 67 ).sample),
+																(QuizImage.where( :category => "shoes", :value => 100 ).sample)]).shuffle
 		return category_1_image_array
 	end
 
@@ -20,10 +20,10 @@ class QuizImage < ActiveRecord::Base
 	end
 
 	def self.generate_category_3_image_array
-		category_1_image_array = ([(QuizImage.where( :category => "clothing", :value => 1 ).sample),
-																(QuizImage.where( :category => "clothing", :value => 34 ).sample),
-																(QuizImage.where( :category => "clothing", :value => 67 ).sample),
-																(QuizImage.where( :category => "clothing", :value => 100 ).sample)]).shuffle
+		category_1_image_array = ([(QuizImage.where( :category => "drinks", :value => 1 ).sample),
+																(QuizImage.where( :category => "drinks", :value => 34 ).sample),
+																(QuizImage.where( :category => "drinks", :value => 67 ).sample),
+																(QuizImage.where( :category => "drinks", :value => 100 ).sample)]).shuffle
 		return category_1_image_array
 	end
 
@@ -36,7 +36,7 @@ class QuizImage < ActiveRecord::Base
 	end
 
 	def self.quiz_results(value_array)
-		quiz_total = (((value_array).reduce(:+))/2).round
+		quiz_total = (((value_array).reduce(:+))/3).round
 		if quiz_total.between?(1,25)
 			return @quiz_results = "divebars,poolhalls"
 		elsif quiz_total.between?(26,50)

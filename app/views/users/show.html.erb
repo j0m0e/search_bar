@@ -1,6 +1,6 @@
 
 <% @businesses.each do |bar| %>
-	<h2><%= BusinessAPI.retrieve_business(bar.business_id)["name"].titleize %><br/></h2>
+	<h2><%= link_to (BusinessAPI.retrieve_business(bar.business_id)["name"].titleize), BusinessAPI.retrieve_business(bar.business_id)["url"]%><br/></h2>
 	<img src="<%= (BusinessAPI.retrieve_business(bar.business_id)["image_url"]) %>"><br/>
 	<%= BusinessAPI.retrieve_business(bar.business_id)["location"]["display_address"][0] %><br/>
 	<%= BusinessAPI.retrieve_business(bar.business_id)["location"]["display_address"][1] %><br/>

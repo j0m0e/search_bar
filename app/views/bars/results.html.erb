@@ -1,10 +1,10 @@
 <% @search_results["businesses"].each do |bar| %><br/>
 
-	Name: <%= bar["name"].titleize %> <br/>
+	<%= link_to bar['name'].titleize, bar["url"] %> <br/>
 
 	<img src= "<%=bar["image_url"]%>"><br/>
 
-	Address: <% bar["location"]["display_address"].each do |address|%> 
+	<% bar["location"]["display_address"].each do |address|%> 
 		<%= address %></br>
 	<% end %>
 

@@ -33,26 +33,30 @@ class QuizImagesController < ApplicationController
 
 	def form_2_submit
 		if session[:value_array].push((params[:value]).to_i)
-			redirect_to results_path         #quiz_images_3_path
+			redirect_to quiz_images_3_path  
 		else
 			redirect_to '/'	
 		end	
 	end
 
-	
+	def form_3
+		category_3_image_array = QuizImage.generate_category_3_image_array
 
-	# def form_3
+		@category_3_quiz_image1 = category_3_image_array[0]
+		@category_3_quiz_image2 = category_3_image_array[1]
+		@category_3_quiz_image3 = category_3_image_array[2]
+		@category_3_quiz_image4 = category_3_image_array[3]
 		
-	# 	render :image_grid_three
-	# end
+		render :image_grid_three
+	end
 
-	# def form_3_submit
-	# 	if session[:value_array].push(quiz_image_params[:value])
-	# 		redirect_to quiz_images_4_path
-	# 	else
-	# 		redirect_to '/'	
-	# 	end	
-	# end
+	def form_3_submit
+		if session[:value_array].push((params[:value]).to_i)
+			redirect_to results_path 
+		else
+			redirect_to '/'	
+		end	
+	end
 
 	# def form_4
 	# 	render :image_grid_four
