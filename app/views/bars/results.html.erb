@@ -1,24 +1,25 @@
-<% @search_results["businesses"].each do |bar| %><br/>
+<section class='results'>
 
-	Name: <%= bar["name"].titleize %> <br/>
+<% @search_results["businesses"].each do |bar| %></br>
+	
+	<div class='resultsimg'>
+	<img src= "<%=bar["image_url"]%>"></br>
+	</div>
 
-	<img src= "<%=bar["image_url"]%>"><br/>
+	<%= bar["name"].upcase %> </p>
 
-	Address: <% bar["location"]["display_address"].each do |address|%> 
+	<% bar["location"]["display_address"].each do |address|%> 
 		<%= address %></br>
 	<% end %>
 
-	Rating: <img src= "<%=bar["rating_img_url_small"]%>"><br/>
+	Rating: <img src= "<%=bar["rating_img_url_small"]%>"></br>
 	
 	<% if session[:current_user_id] %>
 		<%= form_tag "/users", :method => :put do  %>
 			<%= hidden_field_tag :business_id, bar["id"] %>
-			<%= submit_tag "add this bar to your list" %>
-		<% end %>
-					
+			<%= submit_tag "SAVE THIS BAR" %>
+		<% end %>			
 	<% end %>	
-	
-	<hr><br/>
-
-
+	<hr>
 <% end %>
+</section>

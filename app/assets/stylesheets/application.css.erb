@@ -14,6 +14,7 @@
  *= require_self
  */
 
+/*LINKS*/
 a:link {
   text-decoration: none;
   color: white;
@@ -33,6 +34,8 @@ a:hover {
   color: white;
 }
 
+/*BODY*/
+
 body.homepage {
   font-family: Raleway;
   height: 100%;
@@ -49,6 +52,8 @@ body {
   background: url(<%= image_path 'backgroundimage.jpg' %>) no-repeat center center fixed;
 }
 
+/*LAYOUT*/
+
 #homeicon {
   position: absolute;
   left: 95%;
@@ -61,21 +66,11 @@ body {
   color: white;
 }
 
-
-.quiz_grid {
-  height: 80%;
-  width: 84%;
-  margin: 0 auto; 
+#nav {
+  color: white;
 }
 
-.quiz_image input{
-  width: 48%;
-  height: 47%;
-  float: left;
-  border-radius: 12px;
-  padding: 6px;
-}
-
+/*INDEX*/
 
 #logo {
   width: 240px;
@@ -94,38 +89,64 @@ body {
   margin-top: -80px;
 }
 
-#nav {
-  color: white;
-}
-
 #links {
   color: white;
   font-size: 26px;
-  text-align: center;
   float: left;
-  margin-top: -50px
+  margin-top: -50px;
 }
+
 
 #zipform {
   color: black;
   margin-top: 40px;
-  width: 250px;
+  width: 400px;
   margin-left: auto;
   margin-right: auto;
 }
 
-#submit {
-  position: absolute;
-  top:480px;
-  left: 980px;
-  font-family : Raleway;
-  font-size   : 100%;
+label {
+width: 4em;
+float: left;
+text-align: right;
+margin-right: 0.5em;
+display: block
 }
 
-input, select, textarea {
-  font-family : Raleway;
-  font-size   : 100%;
+.submit input{
+margin-left: 4.5em;
 }
+
+
+/*RESULTS PAGE*/
+.results {
+  font-size: 24px;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resultsimg {
+  float: right;
+}
+
+/*QUIZ IMAGES*/
+
+.quiz_grid {
+  height: 80%;
+  width: 84%;
+  margin: 0 auto; 
+}
+
+.quiz_image input{
+  width: 48%;
+  height: 47%;
+  float: left;
+  border-radius: 12px;
+  padding: 6px;
+}
+
+/*HEADERS*/
 
 h1 {
   text-align: center;
@@ -134,9 +155,28 @@ h1 {
   color: mintcream;
 }
 
+
+/*FORMS*/
+
+
+input, select, textarea {
+  font-family : Raleway;
+  font-size   : 100%;
+}
+
 .form {
-  width: 250px;
+  width: 400px;
   margin-left: auto;
   margin-right: auto;
 }
+
+
+label {
+  display: inline-block;
+}
+
+input {
+  display: inline-block;
+}
+
 
