@@ -14,14 +14,14 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-   if session[:current_user_id] == nil 
-      redirect_to root_path
-    else
-      user = User.find(session[:current_user_id])
-      @businesses = user.bars.all
-    end
+def show
+  if session[:current_user_id] != params[:id].to_i 
+    redirect_to root_path
+  else
+    user = User.find(params[:id])
+    @businesses = user.bars.all
   end
+end
 
   def add_bar
     user = User.find(session[:current_user_id])
