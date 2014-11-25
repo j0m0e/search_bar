@@ -4,6 +4,10 @@
 
 <section class='results'>
 
+<% if @search_results["businesses"].count == 0 %>
+	<%= link_to "your search yielded no results. please try again", '/' %>
+<% end %>	
+
 <div class='resultsname'>
 <% @search_results["businesses"].each do |bar| %></br>
 <%= link_to bar['name'].titleize, bar["url"] %> </br>
