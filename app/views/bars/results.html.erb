@@ -4,9 +4,11 @@
 
 <section class='results'>
 
+<a style="color:black">
 <% @search_results["businesses"].each do |bar| %></br>
-<%= link_to bar['name'].titleize, bar["url"] %> <br/>
-	
+<%= link_to bar['name'].titleize, bar["url"] %> </br>
+</a>
+
 <div class='resultsimg'>
 <img src= "<%=bar["image_url"]%>"></br>
 </div>
