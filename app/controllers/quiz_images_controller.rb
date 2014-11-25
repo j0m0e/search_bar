@@ -2,7 +2,7 @@ class QuizImagesController < ApplicationController
 
 	def form_1
 		page1_image_array = (QuizImage.random_array_of_five[0][0]).shuffle
-
+		
 		@category_1_quiz_image1 = page1_image_array[0]
 		@category_1_quiz_image2 = page1_image_array[1]
 		@category_1_quiz_image3 = page1_image_array[2]
