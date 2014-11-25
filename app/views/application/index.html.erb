@@ -22,11 +22,15 @@
 	<br>SEARCH BAR</br>
 	</article>
 
-<p>
+	<p>
+	<h6>Here to help the indecisive.</br> 
+			Enter your address. Pick an image. Bottoms up!</h6>
+	</p>
+
 	<div id = 'zipform'>
 		<%= form_tag ('/bars') do %>
-			<span><%= label_tag :location, "search by zip code or location" %><h6>example: '11211' or 'williamsburg, brooklyn'</h6></span> 
-			<span><%= text_field_tag :location %></span>
+			<span><% label_tag :location %></span> 
+			<span><%= text_field_tag :location, nil, :placeholder => "Address, Eg: '11211' or 'Williamsburg, Brooklyn'", :style => "width:350px;"%></span>
 			<%= submit_tag 'SEARCH' %>
 		<% end %> 
 	</div>
