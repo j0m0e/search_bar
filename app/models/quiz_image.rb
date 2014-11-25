@@ -12,17 +12,6 @@ class QuizImage < ActiveRecord::Base
     random_array_of_five = ((QuizImage.generate_random_array_of_five).shuffle).sample(5)
   end 
 
-  def self.generate_page_image_arrays
-  	page1_image_array = (QuizImage.random_array_of_five[0][0]).shuffle
-  	page2_image_array = (QuizImage.random_array_of_five[1][0]).shuffle
-  	page3_image_array = (QuizImage.random_array_of_five[2][0]).shuffle
-  	page4_image_array = (QuizImage.random_array_of_five[3][0]).shuffle
-  	page5_image_array = (QuizImage.random_array_of_five[4][0]).shuffle
-  	image_arrays = [page1_image_array, page2_image_array, page3_image_array, page4_image_array, page5_image_array]
-  	return image_arrays
-  end	
-
-
 	def self.quiz_results(value_array)
 		quiz_total = (((value_array).reduce(:+))/5).round
 		if quiz_total.between?(1,25)
