@@ -3,14 +3,17 @@ class QuizImage < ActiveRecord::Base
   validates :filepath, presence: true, uniqueness: true
   validates :category, presence: true
 
-  def self.generate_random_array_of_five
-   main_array = [ [QuizImage.where( category: "jackets")], [QuizImage.where( category: "tv_shows")],
-   [QuizImage.where( category: "drinks")], [QuizImage.where( category: "shoes")], [QuizImage.where( category: "coffees")] ]
-  end		 
-
-  def self.random_array_of_five
-    random_array_of_five = ((QuizImage.generate_random_array_of_five).shuffle).sample(5)
+  
+  def self.generate_unique_categories
+    array_of_categories = QuizImage.select(:category).map do |quiz_image|
+      quiz_image.category
+    end 
+    array_of_categories.uniq 
   end 
+
+  def self.get_quiz_images_for_category(category)
+    QuizImage.where(category: category).shuffle
+  end  
 
 	def self.quiz_results(value_array)
 		quiz_total = (((value_array).reduce(:+))/5).round
