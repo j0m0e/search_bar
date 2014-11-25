@@ -1,190 +1,85 @@
 QuizImage.delete_all
 
 quiz_images = QuizImage.create([ 
-												{ filepath: "beat_up_chuck_taylor.jpg", 
+												{ filepath: "shoes/boots.jpg", 
 													category: "shoes", 
 													value: "1" },
-
-													{ filepath: "sperry_topsider.jpg", 
-													category: "shoes", 
-													value: "67" },
-
-													{ filepath: "vans_sneakers.jpg", 
+													
+													{ filepath: "shoes/jack_purcell.jpg", 
 													category: "shoes", 
 													value: "34" },
 
-													{ filepath: "flip_flops.jpg", 
+													{ filepath: "shoes/sperry_topsiders.jpg", 
 													category: "shoes", 
-													value: "34" },
+													value: "67" },
 
-													{ filepath: "manolo_bally.jpg", 
+													{ filepath: "shoes/manolo_bally.jpg", 
 													category: "shoes", 
 													value: "100" },
-
-############################################################
-############################################################
-													{ filepath: "suits.jpg", 
-													category: "tv_show", 
-													value: "100" },
-
-													{ filepath: "downton_abbey.jpg", 
-													category: "tv_show", 
-													value: "100" },
-
-													{ filepath: "madmen.jpg", 
-													category: "tv_show", 
-													value: "100" },
-
-													{ filepath: "house_of_cards.jpg", 
-													category: "tv_show", 
-													value: "100" },
-############################################################
-													{ filepath: "sherlock.jpg", 
-													category: "tv_show", 
-													value: "67" },
-
-													{ filepath: "how_to_get_away_with_murder.jpg", 
-													category: "tv_show", 
-													value: "67" },
-
-													{ filepath: "scandal.png", 
-													category: "tv_show", 
-													value: "67" },
-
-													{ filepath: "greys_anatomy.jpg", 
-													category: "tv_show", 
-													value: "67" },
-
-													{ filepath: "dexter.jpg", 
-													category: "tv_show", 
-													value: "67" },
-
-													{ filepath: "game_of_thrones.jpg", 
-													category: "tv_show", 
-													value: "67" },
-############################################################
-													{ filepath: "friends.jpg", 
-													category: "tv_show", 
-													value: "34" },
-
-													{ filepath: "how_i_met-your_mother.jpg", 
-													category: "tv_show", 
-													value: "34" },
-
-													{ filepath: "seinfeld.jpg", 
-													category: "tv_show", 
-													value: "34" },
-
-													{ filepath: "arrested_development.jpg", 
-													category: "tv_show", 
-													value: "34" },
-
-													{ filepath: "true_detective.jpg", 
-													category: "tv_show", 
-													value: "34" },
-############################################################
-													{ filepath: "breaking_bad.jpg", 
-													category: "tv_show", 
-													value: "1" },
-
-													{ filepath: "walking_dead.jpg", 
-													category: "tv_show", 
-													value: "1" },
-
-													{ filepath: "duck_dynasty.jpg", 
-													category: "tv_show", 
-													value: "1" },
-
-													{ filepath: "deadliest_catch.jpg", 
-													category: "tv_show", 
-													value: "1" },
-
-													{ filepath: "always_sunny.jpg", 
-													category: "tv_show", 
-													value: "1" },
-############################################################
-############################################################
-													{ filepath: "veuve.jpg", 
-													category: "drinks", 
-													value: "100" },
-
-													{ filepath: "cocktails.jpg", 
-													category: "drinks", 
-													value: "100" },
-
-													{ filepath: "cosmo.jpg", 
-													category: "drinks", 
-													value: "100" },
-
-													{ filepath: "red_cocktail.jpg", 
-													category: "drinks", 
-													value: "100" },
-
-													{ filepath: "moet.jpg", 
-													category: "drinks", 
-													value: "100" },
-
-													{ filepath: "martinis.jpg", 
-													category: "drinks", 
-													value: "100" },
-
-													{ filepath: "brooklyn_cocktails.jpg", 
-													category: "drinks", 
-													value: "100" },
-############################################################
-													{ filepath: "vodka_tonic.jpg", 
-													category: "drinks", 
-													value: "67" },
-
-													{ filepath: "aperol-spritz.jpg", 
-													category: "drinks", 
-													value: "67" },
-
-													{ filepath: "white_wine.jpg", 
-													category: "drinks", 
-													value: "67" },
-
-													{ filepath: "red_wine.jpg", 
-													category: "drinks", 
-													value: "67" },
-
-													{ filepath: "sangria.jpg", 
-													category: "drinks", 
-													value: "67" },
-############################################################
-													{ filepath: "guinness.jpg", 
-													category: "drinks", 
-													value: "34" },
-
-													{ filepath: "beer_flight.jpg", 
-													category: "drinks", 
-													value: "34" },
-
-													{ filepath: "beer_pint.jpg", 
-													category: "drinks", 
-													value: "34" },
-
-													{ filepath: "stella.jpg", 
-													category: "drinks", 
-													value: "34" },	
-############################################################
-													{ filepath: "shot_and_a_beer.jpg", 
-													category: "drinks", 
-													value: "1" },	
-
-													{ filepath: "pbr.jpg", 
+#################################################################
+													{ filepath: "drinks/shot_and_a_beer.jpg", 
 													category: "drinks", 
 													value: "1" },
-
-													{ filepath: "pickleback.jpg", 
+													
+													{ filepath: "drinks/beer_pint.jpg", 
 													category: "drinks", 
-													value: "1" }											
+													value: "34" },
 
+													{ filepath: "drinks/red_wine.jpg", 
+													category: "drinks", 
+													value: "67" },
 
+													{ filepath: "drinks/brooklyn_cocktails.jpg", 
+													category: "drinks", 
+													value: "100" },
+#################################################################
+													{ filepath: "tv_shows/always_sunny.jpg", 
+													category: "tv_shows", 
+													value: "1" },
+													
+													{ filepath: "tv_shows/arrested_development.jpg", 
+													category: "tv_shows", 
+													value: "34" },
 
+													{ filepath: "tv_shows/dexter.jpg", 
+													category: "tv_shows", 
+													value: "67" },
 
+													{ filepath: "tv_shows/downton_abbey.jpg", 
+													category: "tv_shows", 
+													value: "100" },
+#################################################################
+													{ filepath: "jackets/leather_jacket.jpg", 
+													category: "jackets", 
+													value: "1" },
+													
+													{ filepath: "jackets/jean_jacket.jpg", 
+													category: "jackets", 
+													value: "34" },
 
+													{ filepath: "jackets/peacoat.jpg", 
+													category: "jackets", 
+													value: "67" },
 
+													{ filepath: "jackets/blazer.jpg", 
+													category: "jackets", 
+													value: "100" },
+#################################################################
+													{ filepath: "coffees/deli_coffee.jpg", 
+													category: "coffees", 
+													value: "1" },
+													
+													{ filepath: "coffees/cup_of_coffee.jpg", 
+													category: "coffees", 
+													value: "34" },
+
+													{ filepath: "coffees/espresso.jpg", 
+													category: "coffees", 
+													value: "67" },
+
+													{ filepath: "coffees/latte.jpg", 
+													category: "coffees", 
+													value: "100" }													
 
 													])
 
