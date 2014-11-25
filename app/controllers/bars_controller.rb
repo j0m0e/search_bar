@@ -1,13 +1,13 @@
 class BarsController < ApplicationController
 
-
-
 	def search 
 		session[:location] = params[:location]
 		if session[:location] == ""
 			redirect_to root_path
 		else
-		redirect_to "/quiz_images/1"
+			redirect_to "/quiz_images/1"
+			session[:categories_seen] = []
+			session[:value_array] = []
 		end
 	end	
 

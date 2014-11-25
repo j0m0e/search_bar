@@ -3,25 +3,30 @@ class QuizImage < ActiveRecord::Base
   validates :filepath, presence: true, uniqueness: true
   validates :category, presence: true
 
-  def self.generate_main_array
-   main_array = [ [QuizImage.where( category: "jackets")], [QuizImage.where( category: "tv_shows")],
-   [QuizImage.where( category: "drinks")], [QuizImage.where( category: "shoes")], [QuizImage.where( category: "coffees")] ]
-  end		 
-
-  def self.random_array_of_five
-    random_array_of_five = ((QuizImage.generate_main_array).shuffle).sample(5)
+  
+  def self.generate_unique_categories
+    array_of_categories = QuizImage.select(:category).map do |quiz_image|
+      quiz_image.category
+    end 
+    array_of_categories.uniq 
   end 
 
-  # def self.generate_page_image_arrays
-  # 	page1_image_array = (QuizImage.random_array_of_five[0][0]).shuffle
-  # 	page2_image_array = (QuizImage.random_array_of_five[1][0]).shuffle
-  # 	page3_image_array = (QuizImage.random_array_of_five[2][0]).shuffle
-  # 	page4_image_array = (QuizImage.random_array_of_five[3][0]).shuffle
-  # 	page5_image_array = (QuizImage.random_array_of_five[4][0]).shuffle
-  # 	image_arrays = [page1_image_array, page2_image_array, page3_image_array, page4_image_array, page5_image_array]
-  # 	return image_arrays
-  # end	
+  def self.get_quiz_images_for_category(category)
+    QuizImage.where(category: category).shuffle
+  end  
 
+
+
+
+
+  # def self.generate_main_array
+  #  main_array = [ QuizImage.where( category: "jackets"), QuizImage.where( category: "tv_shows"),
+  #  QuizImage.where( category: "drinks"), QuizImage.where( category: "shoes"), QuizImage.where( category: "coffees") ]
+  # end		 
+
+  # def self.random_array_of_five
+  #   random_array_of_five = ((QuizImage.generate_main_array).shuffle).sample(5)
+  # end 
 
 	def self.quiz_results(value_array)
 		quiz_total = (((value_array).reduce(:+))/5).round
