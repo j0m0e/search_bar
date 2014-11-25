@@ -1,24 +1,27 @@
-<% @search_results["businesses"].each do |bar| %><br/>
+<section class='results'>
 
-	<%= link_to bar['name'].titleize, bar["url"] %> <br/>
-
-	<img src= "<%=bar["image_url"]%>"><br/>
-
-	<% bar["location"]["display_address"].each do |address|%> 
-		<%= address %></br>
-	<% end %>
-
-	Rating: <img src= "<%=bar["rating_img_url_small"]%>"><br/>
+<%= link_to bar['name'].titleize, bar["url"] %> <br/>
+<% @search_results["businesses"].each do |bar| %></br>
 	
-	<% if session[:current_user_id] %>
-		<%= form_tag "/users", :method => :put do  %>
-			<%= hidden_field_tag :business_id, bar["id"] %>
-			<%= submit_tag "add this bar to your list" %>
-		<% end %>
-					
-	<% end %>	
-	
-	<hr><br/>
+<div class='resultsimg'>
+<img src= "<%=bar["image_url"]%>"></br>
+</div>
 
+<%= bar["name"].upcase %> </p>
 
+<% bar["location"]["display_address"].each do |address|%> 
+	<%= address %></br>
 <% end %>
+
+Rating: <img src= "<%=bar["rating_img_url_small"]%>"></br>
+
+<% if session[:current_user_id] %>
+	<%= form_tag "/users", :method => :put do  %>
+		<%= hidden_field_tag :business_id, bar["id"] %>
+		<%= submit_tag "SAVE THIS BAR" %>
+	<% end %>			
+<% end %>	
+<hr>
+<% end %>
+
+</section>
