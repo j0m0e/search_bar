@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   post "/quiz_images/3", to: "quiz_images#form_3_submit"
   get "/quiz_images/4", to: "quiz_images#form_4"
   post "/quiz_images/4", to: "quiz_images#form_4_submit"
+  get "/quiz_images/5", to: "quiz_images#form_5"
+  post "/quiz_images/5", to: "quiz_images#form_5_submit"
 
   #SESSIONS ROUTE
   get 'sessions/new' => 'sessions#new', as: 'login'
