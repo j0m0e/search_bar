@@ -1,4 +1,6 @@
+<h1> Hi, <%= User.find(session[:current_user_id]).username.capitalize %></h1>
 
+<section class ='results'>
 <% @businesses.each do |bar| %>
 	<h2><%= link_to (BusinessAPI.retrieve_business(bar.business_id)["name"].titleize), BusinessAPI.retrieve_business(bar.business_id)["url"]%><br/></h2>
 	<img src="<%= (BusinessAPI.retrieve_business(bar.business_id)["image_url"]) %>"><br/>
@@ -9,7 +11,7 @@
 	<img src="<%= (BusinessAPI.retrieve_business(bar.business_id)["rating_img_url_small"]) %>" ><br/>
 <% end %>
 
-
+</section>
 
 
 

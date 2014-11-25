@@ -18,38 +18,42 @@
 a:link {
   text-decoration: none;
   color: white;
-  font-style: bold;
 }
 
 a:visited {
   text-decoration: none;
   color: white;
-  font-style: bold;
+
 }
 
 a:hover {
   background: white;
   opacity: 0.8;
-  font-style: bold;
   color: white;
 }
 
 /*BODY*/
 
+
 body.homepage {
   font-family: Raleway;
-  height: 100%;
-  width: 100%;
   margin: 0 auto;
-  background: url(<%= image_path 'searchbar1.jpg' %>) no-repeat center center fixed;
+  background: url(<%= image_path 'searchbar1.jpg' %>) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 body {
   font-family: Raleway;
-  height: 100%;
-  width: 100%;
+  background-size: cover;
   margin: 0 auto;
-  background: url(<%= image_path 'backgroundimage.jpg' %>) no-repeat center center fixed;
+  background: url(<%= image_path 'backgroundimage.jpg' %>) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /*LAYOUT*/
@@ -59,10 +63,11 @@ body {
   left: 95%;
   top: 2%;
   opacity: 0.6;
+  max-width: 200px;
 }
 
 #main {
-  font-size: 20px;
+  font-size: 16px;
   color: white;
 }
 
@@ -73,7 +78,7 @@ body {
 /*INDEX*/
 
 #logo {
-  width: 240px;
+  width: 200px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
@@ -82,16 +87,16 @@ body {
 #title {
   text-align: center;
   font-family: Roboto Slab;
-  font-size: 110px;
+  font-size: 70px;
   color: mintcream;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
-  margin-top: -80px;
+  margin-top: -70px;
 }
 
 #links {
   color: white;
-  font-size: 26px;
+  font-size: 20px;
   float: left;
   margin-top: -50px;
 }
@@ -99,19 +104,12 @@ body {
 
 #zipform {
   color: black;
-  margin-top: 40px;
-  width: 400px;
+  margin-top: 10px;
+  width: 430px;
   margin-left: auto;
   margin-right: auto;
 }
 
-label {
-width: 4em;
-float: left;
-text-align: right;
-margin-right: 0.5em;
-display: block
-}
 
 .submit input{
 margin-left: 4.5em;
@@ -163,8 +161,8 @@ h5 {
 h6 {
   text-align: center;
   font-family: Raleway;
-  font-size: 12px;
-  color: mintcream;
+  font-size: 16px;
+  color: black;
 }
 
 
@@ -177,8 +175,8 @@ input, select, textarea {
   font-size   : 100%;
 }
 
-.form {
-  width: 400px;
+.field {
+  width: 200px;
   margin-left: auto;
   margin-right: auto;
 }
