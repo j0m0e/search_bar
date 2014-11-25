@@ -1,5 +1,7 @@
 class BarsController < ApplicationController
 
+
+
 	def search 
 		session[:location] = params[:location]
 		redirect_to "/quiz_images/1"
