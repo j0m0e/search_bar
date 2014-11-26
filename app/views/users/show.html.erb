@@ -1,4 +1,4 @@
-<h1> Hi, <%= User.find(session[:current_user_id]).username.capitalize %></h1>
+<h1> Hi, <%= @user.username.capitalize %></h1>
 
 <hr>
 
@@ -20,9 +20,12 @@
 	<%= BusinessAPI.retrieve_business(bar.business_id)["phone"] %></br>
 
 Rating: <img src="<%= (BusinessAPI.retrieve_business(bar.business_id)["rating_img_url_small"]) %>" ></br>
-
+	
+	<%= form_tag "/users/#{@user.id}/remove_bar", :method => :delete do  %>
+		<%= hidden_field_tag :business_id, bar.id %>
+		<%= submit_tag "DELETE" %>
+	<% end %>
 <hr>
-
 <% end %>
 
 </section>

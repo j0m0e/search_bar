@@ -11,5 +11,8 @@ class User < ActiveRecord::Base
   	self.bars.push(bar) unless self.bars.include?(bar)
   end
 
+  def remove_bar(bar)
+  	self.bars.destroy(bar) if self.bars.include?(bar)
+  end
 
 end

@@ -16,4 +16,6 @@ class BarsController < ApplicationController
 		@search_results = SearchAPI.search_for_bar(find_quiz_results, session[:location])
 	end	
 
+
+
 end
