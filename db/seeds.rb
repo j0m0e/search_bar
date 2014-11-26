@@ -95,8 +95,71 @@ quiz_images = QuizImage.create([
 
 													{ filepath: "dogs/poodle.jpg", 
 													category: "dogs", 
-													value: "100" }																										
+													value: "100" },																										
+#################################################################
+													{ filepath: "magazines/fader.jpg", 
+													category: "magazines", 
+													value: "1" },
+													
+													{ filepath: "magazines/time.jpg", 
+													category: "magazines", 
+													value: "34" },
 
+													{ filepath: "magazines/sports_illustrated.jpg", 
+													category: "magazines", 
+													value: "67" },
+
+													{ filepath: "magazines/new_yorker.jpg", 
+													category: "magazines", 
+													value: "100" },
+#################################################################
+													{ filepath: "cars/van.jpg", 
+													category: "cars", 
+													value: "1" },
+													
+													{ filepath: "cars/honda.jpg", 
+													category: "cars", 
+													value: "34" },
+
+													{ filepath: "cars/audi.jpg", 
+													category: "cars", 
+													value: "67" },
+
+													{ filepath: "cars/mercedes.jpg", 
+													category: "cars", 
+													value: "100" },
+#################################################################
+													{ filepath: "candies/candy_corn.jpg", 
+													category: "candies", 
+													value: "1" },
+													
+													{ filepath: "candies/chupachups.jpg", 
+													category: "candies", 
+													value: "34" },
+
+													{ filepath: "candies/tolberone.jpg", 
+													category: "candies", 
+													value: "67" },
+
+													{ filepath: "candies/truffles.jpg", 
+													category: "candies", 
+													value: "100" },
+#################################################################
+													{ filepath: "breakfast/cereal.jpg", 
+													category: "breakfast", 
+													value: "1" },
+													
+													{ filepath: "breakfast/american_breakfast.jpg", 
+													category: "breakfast", 
+													value: "34" },
+
+													{ filepath: "breakfast/french_toast.jpg", 
+													category: "breakfast", 
+													value: "67" },
+
+													{ filepath: "breakfast/brunch.jpg", 
+													category: "breakfast", 
+													value: "100" },																										
 													])
 
 
