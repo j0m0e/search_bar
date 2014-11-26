@@ -22,10 +22,9 @@ Rails.application.routes.draw do
   post "/bars", to: "bars#search"
   get "/bars", to: "bars#results", as: 'results'
 
-
   #USERS ROUTE
-
   put "/users", to: "users#add_bar"
+  delete "/users/:id/remove_bar",  to: "users#remove_bar"
   get "/users/:id", to: "users#show"
 
 end

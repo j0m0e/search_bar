@@ -3,9 +3,8 @@
 <hr>
 
 <section class='results'>
-
 <% if @search_results["businesses"].count == 0 %>
-	<%= link_to "Your search yielded no results. Please try again", '/' %>
+	<%= link_to "Your search yielded no results. Please try again.", '/', style: 'color:black;'%>
 <% end %>	
 
 <div class='resultsname'>

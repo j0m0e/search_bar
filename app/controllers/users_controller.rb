@@ -18,8 +18,8 @@ def show
   if session[:current_user_id] != params[:id].to_i 
     redirect_to root_path
   else
-    user = User.find(params[:id])
-    @businesses = user.bars.all
+    @user = User.find(params[:id])
+    @businesses = @user.bars.all
   end
 end
 
@@ -27,6 +27,13 @@ end
     user = User.find(session[:current_user_id])
     bar = Bar.find_or_create_by(business_id: params[:business_id])
     user.add_bar(bar)
+    redirect_to user  
+  end 
+
+  def remove_bar
+    user = User.find(session[:current_user_id])
+    bar = Bar.find(params[:business_id])
+    user.remove_bar(bar)
     redirect_to user  
   end 
 
