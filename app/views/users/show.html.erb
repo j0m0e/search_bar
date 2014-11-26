@@ -6,7 +6,7 @@
 
 <div class = 'resultsname'>
 <% @businesses.each do |bar| %>
-<%= link_to (BusinessAPI.retrieve_business(bar.business_id)["name"].titleize), BusinessAPI.retrieve_business(bar.business_id)["url"]%></br>
+<%= link_to (BusinessAPI.retrieve_business(bar.business_id)["name"].titleize), BusinessAPI.retrieve_business(bar.business_id)["url"], style: 'color:black;'%></br>
 </div>
 
 <div class='resultsimg'>
