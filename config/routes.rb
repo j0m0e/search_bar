@@ -26,5 +26,6 @@ Rails.application.routes.draw do
   #USERS ROUTE
 
   put "/users", to: "users#add_bar"
- 
+  get "/users/:id", to: "users#show"
+
 end
