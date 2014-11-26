@@ -3,6 +3,9 @@
 <hr>
 
 <section class ='results'>
+<% if @businesses.count == 0 %>
+	<%= link_to "Start looking for bars now", '/', style: 'color:black;'%>
+<% end %>	
 
 <div class = 'resultsname'>
 <% @businesses.each do |bar| %>
@@ -10,6 +13,7 @@
 </div>
 
 <div class='resultsimg'>
+
 <img src="<%= (BusinessAPI.retrieve_business(bar.business_id)["image_url"]) %>"></br>
 </div>
 
