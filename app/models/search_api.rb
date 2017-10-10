@@ -9,10 +9,10 @@ class SearchAPI
 # method that returns results based on that search 
 	
 	def self.make_client
-	client = Yelp::Client.new({ consumer_key: 'dZJPaWyOc0QI2LV0_IiFgw' ,
-                            consumer_secret: 'pSH96gUah8_5trIEnuWMENKiiP0',
-                            token: 'Qp0Om3YRznyHTjNgWOvlkubBsZF9m_bf',
-                            token_secret:'2u2YyRYrMnZhqc9a827CoABR2ec'
+	client = Yelp::Client.new({ consumer_key: '' ,
+                            consumer_secret: '',
+                            token: '',
+                            token_secret:''
                           })
 	end
 
