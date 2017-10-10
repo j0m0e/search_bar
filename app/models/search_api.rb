@@ -11,8 +11,8 @@ class SearchAPI
 	def self.make_client
 	client = Yelp::Client.new({ consumer_key: 'dZJPaWyOc0QI2LV0_IiFgw' ,
                             consumer_secret: 'pSH96gUah8_5trIEnuWMENKiiP0',
-                            token: '4RvQDhd44HhAJdefTKeW3rmwGjs5MbG-',
-                            token_secret:'6tkuLz4ppLJrhiPou8SBbMy-E_8'
+                            token: 'Qp0Om3YRznyHTjNgWOvlkubBsZF9m_bf',
+                            token_secret:'2u2YyRYrMnZhqc9a827CoABR2ec'
                           })
 	end
 
